@@ -11,7 +11,7 @@ function main() {
     var letter = html_element.value[0].toLowerCase();
     var index_letter = letters.indexOf(letter)
     if (html_element.value.length === 2 &&  index_letter != -1 && number.indexOf(parseInt(html_element.value[1])) != -1) {
-        console.log(html_element.value.length);
+
         vertical_check(html_element.value, index_letter)
         horizontal_check(html_element.value, index_letter)
         alert(response)
