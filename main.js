@@ -10,7 +10,8 @@ function main() {
     var html_element = document.getElementById('pos');
     var letter = html_element.value[0].toLowerCase();
     var index_letter = letters.indexOf(letter)
-    if (index_letter != -1 && number.indexOf(parseInt(html_element.value[1])) != -1) {
+    if (html_element.value.length === 2 &&  index_letter != -1 && number.indexOf(parseInt(html_element.value[1])) != -1) {
+        console.log(html_element.value.length);
         vertical_check(html_element.value, index_letter)
         horizontal_check(html_element.value, index_letter)
         alert(response)
@@ -45,6 +46,7 @@ function vertical_check(ask_input, index_letter) {
     }
 }
 function horizontal_check(ask_input, index_letter) {
+
     numOnDesc = ask_input[1]
     if (parseInt(index_letter) - parseInt('2') >= 0) { //осуществляется проверка на выход за пределы
         if (parseInt(numOnDesc) < number.length) {
